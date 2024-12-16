@@ -108,13 +108,13 @@ json_data = {
 
 r = requests.post(url=url, headers=headers, json=json_data)
 
-r.status_code
+print(r.status_code)
 
 r.json()
 
 Metadata= json.loads(r.json()["choices"][0]["message"]["function_call"]["arguments"])['column_metadata']
 
-Metadata
+# Metadata
 
 # print(type(Metadata))
 
